@@ -76,8 +76,8 @@ function Contact() {
       const response = await SendMail(form)
       console.log(response)
       setIsLoading(false);
-      setMessage(response.message);
-      toast.success(response.message, {
+      setMessage(response);
+      toast.success(response, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
