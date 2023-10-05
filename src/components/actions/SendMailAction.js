@@ -11,7 +11,7 @@ export async function SendMail(form){
             body: JSON.stringify(form),
           };
       
-          const response = await fetch("http://localhost:3001/api/mail", requestOptions);
+          const response = await fetch(`${process.env.API_URL}/api/mail`, requestOptions);
 
           if (response.ok){
             const data = response.json()
